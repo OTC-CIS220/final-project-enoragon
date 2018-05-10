@@ -10,10 +10,10 @@ public class InTheBowl : MonoBehaviour {
 
     void Start()
     {
-        peeSystem = GetComponent<ParticleSystem>();
+        peeSystem = GetComponentInChildren<ParticleSystem>();
     }
 
-	void OnParticleTrigger()
+    void OnParticleTrigger()
     {
         int particleNumber = peeSystem.GetTriggerParticles(ParticleSystemTriggerEventType.Enter, enter);
 
@@ -26,4 +26,5 @@ public class InTheBowl : MonoBehaviour {
 
         peeSystem.SetTriggerParticles(ParticleSystemTriggerEventType.Enter, enter);
     }
+
 }
